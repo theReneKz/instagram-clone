@@ -1,0 +1,4 @@
+{
+    "auth/user-not-found":"O nome de usuário inserido não pertence a uma conta. Verifique seu nome de usuário e tente novamente",
+    "auth/email-already-in-use":"Já existe um usuário cadastrado para este e-mail"
+}

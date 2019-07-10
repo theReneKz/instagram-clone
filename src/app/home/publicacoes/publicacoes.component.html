@@ -1,0 +1,23 @@
+<div class="row" *ngFor="let publicacao of publicacoes">
+    <div class="col d-flex justify-content-center">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text"><strong>{{publicacao.usuario}}</strong></p>
+        </div>
+
+        <img class="card-img" src="{{publicacao.url || ''}}" />
+        
+        <div class="card-body">
+          <p class="card-text">{{publicacao.titulo}}</p>
+          <small>Publicado em: {{publicacao.getData() | date:'medium'}}</small>
+
+          <hr />
+          <input 
+            type="text" 
+            class="form-control comentario"
+            placeholder="Adicione um comentário..." 
+          />
+        </div>
+      </div>
+    </div>
+  </div>

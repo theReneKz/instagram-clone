@@ -1,0 +1,21 @@
+<div class="container" style="margin-top: 30px;">
+    <div class="row">
+        <div class="col-sm-6 d-flex flex-row-reverse bd-highlight" [@animacao-banner]="estadoBanner">
+            <app-banner></app-banner>
+        </div>
+        <div *ngIf="cadastro">
+            <div class="col-sm-6 d-flex flex-row bd-highlight mb-3" [@animacao-painel]="estadoPainel">
+                <app-cadastro (exibirPainel)="exibirPainel($event)"  (erroValidacao)="chacoalha($event)"></app-cadastro>
+            </div>
+        </div>
+        <div *ngIf="!cadastro">
+           <div class="col-sm-6 d-flex flex-row bd-highlight mb-3" 
+            [@animacao-painel]="estadoPainel"
+            >
+              <app-login (exibirPainel)="exibirPainel($event)" (erroValidacao)="chacoalha($event)"></app-login>
+           </div>
+        </div>
+        
+       
+    </div>
+</div>
